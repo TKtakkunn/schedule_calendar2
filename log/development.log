@@ -161,3 +161,37 @@ Processing by MeetingsController#index as HTML
 Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/meetings" for ::1 at 2019-09-19 15:38:47 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.6ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:15
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.8ms)
+  Rendered meetings/index.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 202ms (Views: 188.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/meetings" for ::1 at 2019-09-19 15:42:45 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:15
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.4ms)
+  Rendered meetings/index.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 159ms (Views: 149.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2019-09-19 15:42:49 +0900
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:15
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.9ms)
+  Rendered meetings/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.3ms)
+
+
