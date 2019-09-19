@@ -347,3 +347,81 @@ Processing by MeetingsController#index as HTML
 Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/meetings" for ::1 at 2019-09-19 16:27:44 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.7ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (515.6ms)
+  Rendered meetings/index.html.erb within layouts/application (531.1ms)
+Completed 200 OK in 753ms (Views: 741.6ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/meetings/3" for ::1 at 2019-09-19 16:28:24 +0900
+Processing by MeetingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fM8/PZnOq3rlja3aTM9XsSWq3CDk8uVTQcFrU3fws1OvXUWGtNyqpn2KXs76/Eyop4K9EJ2i5ZIyi5SAUtpuZw==", "id"=>"3"}
+  [1m[36mMeeting Load (0.2ms)[0m  [1m[34mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/meetings_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/meetings_controller.rb:57
+  [1m[36mMeeting Destroy (0.4ms)[0m  [1m[31mDELETE FROM "meetings" WHERE "meetings"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/meetings_controller.rb:57
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/meetings_controller.rb:57
+Redirected to http://localhost:3000/meetings
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/meetings" for ::1 at 2019-09-19 16:28:24 +0900
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.1ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.2ms)
+  Rendered meetings/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/meetings/new" for ::1 at 2019-09-19 16:28:29 +0900
+Processing by MeetingsController#new as HTML
+  Rendering meetings/new.html.erb within layouts/application
+  Rendered meetings/_form.html.erb (14.0ms)
+  Rendered meetings/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/meetings" for ::1 at 2019-09-19 16:29:01 +0900
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jaiklhPE3N5Vuxfa2qwB2/Lq/djhtJBJrCerGb73AhvweRpnLx5N3Kjv1lld3Rpdtl7DrDaNwuUDRJolVR+Peg==", "meeting"=>{"name"=>"My Birthday", "start_time(1i)"=>"2019", "start_time(2i)"=>"9", "start_time(3i)"=>"21", "start_time(4i)"=>"00", "start_time(5i)"=>"00", "end_time(1i)"=>"2019", "end_time(2i)"=>"9", "end_time(3i)"=>"21", "end_time(4i)"=>"23", "end_time(5i)"=>"59"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/meetings_controller.rb:30
+  [1m[36mMeeting Create (1.0ms)[0m  [1m[32mINSERT INTO "meetings" ("name", "start_time", "created_at", "updated_at", "end_time") VALUES (?, ?, ?, ?, ?)[0m  [["name", "My Birthday"], ["start_time", "2019-09-20 15:00:00"], ["created_at", "2019-09-19 07:29:01.994132"], ["updated_at", "2019-09-19 07:29:01.994132"], ["end_time", "2019-09-21 14:59:00"]]
+  ↳ app/controllers/meetings_controller.rb:30
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/meetings_controller.rb:30
+Redirected to http://localhost:3000/meetings/4
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/meetings/4" for ::1 at 2019-09-19 16:29:02 +0900
+Processing by MeetingsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMeeting Load (0.3ms)[0m  [1m[34mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/meetings_controller.rb:67
+  Rendering meetings/show.html.erb within layouts/application
+  Rendered meetings/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/meetings" for ::1 at 2019-09-19 16:29:04 +0900
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (5.1ms)
+  Rendered meetings/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+

@@ -29,5 +29,9 @@ module ScheduleCalendar
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.time_zone = "Tokyo"
+    config.beginning_of_week = :sunday
+    config.i18n.default_locale = :ja
   end
 end
