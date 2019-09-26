@@ -425,3 +425,796 @@ Processing by MeetingsController#index as HTML
 Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.2ms)
 
 
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateMembers (20190919083248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190919083248_create_members.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "members" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "full_name" varchar, "email" varchar, "birthday" date, "sex" integer DEFAULT 0 NOT NULL, "administrator" boolean DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190919083248_create_members.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190919083248"]]
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (2.1ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "administrator", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Taro"], ["full_name", "佐藤 太郎"], ["email", "Taro@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["administrator", 1], ["created_at", "2019-09-19 08:45:14.881139"], ["updated_at", "2019-09-19 08:45:14.881139"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.3ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jiro"], ["full_name", "鈴木 次郎"], ["email", "Jiro@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["created_at", "2019-09-19 08:45:14.891273"], ["updated_at", "2019-09-19 08:45:14.891273"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.2ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hana"], ["full_name", "高橋 花子"], ["email", "Hana@example.com"], ["birthday", "1981-12-01"], ["sex", 2], ["created_at", "2019-09-19 08:45:14.893749"], ["updated_at", "2019-09-19 08:45:14.893749"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.3ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John"], ["full_name", "田中 太郎"], ["email", "John@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["created_at", "2019-09-19 08:45:14.896060"], ["updated_at", "2019-09-19 08:45:14.896060"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.4ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mike"], ["full_name", "佐藤 次郎"], ["email", "Mike@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["created_at", "2019-09-19 08:45:14.900779"], ["updated_at", "2019-09-19 08:45:14.900779"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.4ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sophy"], ["full_name", "鈴木 花子"], ["email", "Sophy@example.com"], ["birthday", "1981-12-01"], ["sex", 2], ["created_at", "2019-09-19 08:45:14.903688"], ["updated_at", "2019-09-19 08:45:14.903688"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.5ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bill"], ["full_name", "高橋 太郎"], ["email", "Bill@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["created_at", "2019-09-19 08:45:14.917526"], ["updated_at", "2019-09-19 08:45:14.917526"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.4ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alex"], ["full_name", "田中 次郎"], ["email", "Alex@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["created_at", "2019-09-19 08:45:14.920901"], ["updated_at", "2019-09-19 08:45:14.920901"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.4ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mary"], ["full_name", "佐藤 花子"], ["email", "Mary@example.com"], ["birthday", "1981-12-01"], ["sex", 2], ["created_at", "2019-09-19 08:45:14.923991"], ["updated_at", "2019-09-19 08:45:14.923991"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.3ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["full_name", "鈴木 太郎"], ["email", "Tom@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["created_at", "2019-09-19 08:45:14.926958"], ["updated_at", "2019-09-19 08:45:14.926958"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+Started GET "/meetings" for ::1 at 2019-09-19 18:07:52 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (137.5ms)
+  Rendered meetings/index.html.erb within layouts/application (148.7ms)
+Completed 200 OK in 397ms (Views: 387.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/meetings/1" for ::1 at 2019-09-19 18:16:16 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MeetingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMeeting Load (0.2ms)[0m  [1m[34mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/meetings_controller.rb:67
+  Rendering meetings/show.html.erb within layouts/application
+  Rendered meetings/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 195ms (Views: 176.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/meetings" for ::1 at 2019-09-19 18:16:18 +0900
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (84.8ms)
+  Rendered meetings/index.html.erb within layouts/application (89.9ms)
+Completed 200 OK in 103ms (Views: 101.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/meetings/1" for ::1 at 2019-09-19 18:16:22 +0900
+Processing by MeetingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hVqcoXS2i+c/ETt3rrmmfWEV6gDmIUqwhj8PlCaBFfdWyOYaWaSKO6cWyGMYir1k4z2LMJ9xSnH1dfBHA6vIww==", "id"=>"1"}
+  [1m[36mMeeting Load (0.1ms)[0m  [1m[34mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/meetings_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/meetings_controller.rb:57
+  [1m[36mMeeting Destroy (0.3ms)[0m  [1m[31mDELETE FROM "meetings" WHERE "meetings"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/meetings_controller.rb:57
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/meetings_controller.rb:57
+Redirected to http://localhost:3000/meetings
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/meetings" for ::1 at 2019-09-19 18:16:22 +0900
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.1ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.2ms)
+  Rendered meetings/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/members" for ::1 at 2019-09-19 18:35:55 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  Rendered members/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 307ms (Views: 294.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members/1" for ::1 at 2019-09-19 18:37:17 +0900
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:12
+  Rendering members/show.html.erb within layouts/application
+  Rendered members/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 290ms (Views: 268.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/members" for ::1 at 2019-09-19 19:57:25 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  Rendered members/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 215ms (Views: 203.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members" for ::1 at 2019-09-19 19:57:31 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  Rendered members/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members" for ::1 at 2019-09-19 20:02:40 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 65ms (Views: 60.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/members/search?utf8=%E2%9C%93&q=%E5%B1%B1%E7%94%B0&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2019-09-21 02:14:03 +0900
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/Users/katasetakumi/rails/schedule_calendar2/app/controllers/members_controller.rb:28: else without rescue is useless
+        else
+        ^~~~
+/Users/katasetakumi/rails/schedule_calendar2/app/controllers/members_controller.rb:45: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/members_controller.rb:28: else without rescue is useless
+app/controllers/members_controller.rb:45: syntax error, unexpected end, expecting end-of-input
+Started GET "/members/search?utf8=%E2%9C%93&q=%E5%B1%B1%E7%94%B0&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2019-09-21 02:15:21 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MembersController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"山田", "commit"=>"検索"}
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE (name LIKE '%山田%' OR full_name LIKE '%山田%') ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 250ms (Views: 240.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/members/search?utf8=%E2%9C%93&q=%E4%BD%90%E8%97%A4&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2019-09-21 02:15:43 +0900
+Processing by MembersController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"佐藤", "commit"=>"検索"}
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE (name LIKE '%佐藤%' OR full_name LIKE '%佐藤%') ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/members/1" for ::1 at 2019-09-21 02:16:26 +0900
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:12
+  Rendering members/show.html.erb within layouts/application
+  Rendered members/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/members/1" for ::1 at 2019-09-21 02:16:26 +0900
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:12
+  Rendering members/show.html.erb within layouts/application
+  Rendered members/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/members" for ::1 at 2019-09-21 02:16:30 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/members/1" for ::1 at 2019-09-21 02:16:40 +0900
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:12
+  Rendering members/show.html.erb within layouts/application
+  Rendered members/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/members/1/edit" for ::1 at 2019-09-21 02:16:45 +0900
+Processing by MembersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:20
+  Rendering members/edit.html.erb within layouts/application
+  Rendered members/_form.html.erb (197.0ms)
+  Rendered members/edit.html.erb within layouts/application (199.8ms)
+Completed 200 OK in 215ms (Views: 211.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/members/1" for ::1 at 2019-09-21 02:16:47 +0900
+Processing by MembersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5g4T892t/8xhigmrOQ8Gcy20rBiWOwEr9pi3f8K2Hn7d/L68wCK2S9jCsPkkDPTe8/bvBRbtlwgGk9KHONzy+w==", "member"=>{"name"=>"Taro", "full_name"=>"佐藤 太郎", "sex"=>"1", "birthday(1i)"=>"1981", "birthday(2i)"=>"12", "birthday(3i)"=>"1", "email"=>"Taro@example.com", "administrator"=>"1"}, "commit"=>"更新する", "id"=>"1"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/members_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/members_controller.rb:35
+Redirected to http://localhost:3000/members/1
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/members/1" for ::1 at 2019-09-21 02:16:47 +0900
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:12
+  Rendering members/show.html.erb within layouts/application
+  Rendered members/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/members/1" for ::1 at 2019-09-21 02:16:49 +0900
+Processing by MembersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ST0AUOlUpYnsAY+cEM9uwB0AVA1lTtNN0GoUjTO8ts2ar3rrxEakVXQGfIim/HXZnyg1PRwe04yjIOteFpZr+Q==", "member"=>{"name"=>"Taro", "full_name"=>"佐藤 太郎", "sex"=>"1", "birthday(1i)"=>"1981", "birthday(2i)"=>"12", "birthday(3i)"=>"1", "email"=>"Taro@example.com", "administrator"=>"1"}, "commit"=>"更新する", "id"=>"1"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/members_controller.rb:35
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/members_controller.rb:35
+Redirected to http://localhost:3000/members/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/members/1" for ::1 at 2019-09-21 02:16:49 +0900
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:12
+  Rendering members/show.html.erb within layouts/application
+  Rendered members/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/members" for ::1 at 2019-09-21 02:16:54 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/members/10" for ::1 at 2019-09-21 02:16:59 +0900
+Processing by MembersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y+6LvadtiSGqq5olHb7SI8lXURUHseBaFZ6pTx1i1OewfPEGin+I/TKsaTGrjck6S38wJX7h4Jtm1FacOEgJ0w==", "id"=>"10"}
+No template found for MembersController#destroy, rendering head :no_content
+Completed 204 No Content in 29ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/members" for ::1 at 2019-09-21 02:17:04 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/members" for ::1 at 2019-09-21 02:17:05 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/members/10" for ::1 at 2019-09-21 02:17:09 +0900
+Processing by MembersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Kd7GDAy7G6w7Pw8d3nNz87gbmtHeBGxIhAHybu2NIg/6TLy3IakacKM4/AloQGjqOjP74adUbIn3Sw29yKf/Ow==", "id"=>"10"}
+No template found for MembersController#destroy, rendering head :no_content
+Completed 204 No Content in 28ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-09-24 17:16:52 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.6ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (135.8ms)
+  Rendered meetings/index.html.erb within layouts/application (147.8ms)
+Completed 200 OK in 382ms (Views: 371.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/meetings" for ::1 at 2019-09-24 17:16:58 +0900
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (5.6ms)
+  Rendered meetings/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-09-24 17:30:14 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.7ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (144.9ms)
+  Rendered meetings/index.html.erb within layouts/application (160.5ms)
+Completed 200 OK in 362ms (Views: 349.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2019-09-24 17:42:25 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.1ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (81.2ms)
+  Rendered meetings/index.html.erb within layouts/application (89.2ms)
+Completed 200 OK in 248ms (Views: 239.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/members" for ::1 at 2019-09-24 17:42:30 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members" ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 57ms (Views: 50.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/members/new" for ::1 at 2019-09-24 17:42:34 +0900
+Processing by MembersController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `new' for :Date:Symbol
+Did you mean?  next):
+  
+app/controllers/members_controller.rb:16:in `new'
+Started GET "/members/new" for ::1 at 2019-09-24 17:45:00 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MembersController#new as HTML
+  Rendering members/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered members/_form.html.erb (179.7ms)
+  Rendered members/new.html.erb within layouts/application (182.4ms)
+Completed 200 OK in 352ms (Views: 336.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/members" for ::1 at 2019-09-24 17:45:17 +0900
+Processing by MembersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N1pfVBUurGcPDAHV4+KNSnet5Trz4hkDrXbvoL4kZDn/dQqBvjWn+uWGuuvdWA1Wr6kjdO0O9WjXALHsVodG0A==", "member"=>{"name"=>"aaa!", "full_name"=>"山田　丈太郎", "sex"=>"1", "birthday(1i)"=>"1980", "birthday(2i)"=>"1", "birthday(3i)"=>"1", "email"=>"Taro@example@com", "administrator"=>"0"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/members_controller.rb:25
+  [1m[36mMember Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "aaa!"], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/members_controller.rb:25
+  Rendering members/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.9ms)
+  Rendered members/_form.html.erb (10.5ms)
+  Rendered members/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 78ms (Views: 69.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/members" for ::1 at 2019-09-24 17:45:34 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/members" for ::1 at 2019-09-24 18:05:14 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 203ms (Views: 193.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/members/new" for ::1 at 2019-09-24 18:05:16 +0900
+Processing by MembersController#new as HTML
+  Rendering members/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered members/_form.html.erb (105.1ms)
+  Rendered members/new.html.erb within layouts/application (107.3ms)
+Completed 200 OK in 123ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/members" for ::1 at 2019-09-24 18:05:21 +0900
+Processing by MembersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yLJO+fSyK3cdPyXJKhMDfHvchTB/dTmGIfgOY1+fgdDpVgbeO29FQXROgtqUPJAxwsavMN0Nqxk5cnp/S62gww==", "member"=>{"name"=>"aaa!", "full_name"=>"山田　丈太郎", "birthday(1i)"=>"1980", "birthday(2i)"=>"1", "birthday(3i)"=>"1", "email"=>"", "administrator"=>"0"}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/members_controller.rb:25
+  [1m[36mMember Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "aaa!"], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/members_controller.rb:25
+  Rendering members/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered members/_form.html.erb (4.6ms)
+  Rendered members/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 29ms (Views: 23.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/members" for ::1 at 2019-09-24 18:05:41 +0900
+Processing by MembersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GsdgIApyZyCVZSTQxQzs6Mlaq0uQWo6nNoDpcPN8UoDS6DX1oWlsvX/vn+77tmz0EV5tBY62YsxM9rc8G99waQ==", "member"=>{"name"=>"aaa!", "full_name"=>"山田　丈太郎", "sex"=>"1", "birthday(1i)"=>"1980", "birthday(2i)"=>"1", "birthday(3i)"=>"1", "email"=>"Taro@example@com", "administrator"=>"0"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/members_controller.rb:25
+  [1m[36mMember Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "aaa!"], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/members_controller.rb:25
+  Rendering members/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered members/_form.html.erb (5.3ms)
+  Rendered members/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 53ms (Views: 45.7ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AlterMembers1 (20190924094535)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "members" ADD "password_digest" varchar[0m
+  ↳ db/migrate/20190924094535_alter_members1.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190924094535"]]
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ lib/tasks/database.rake:5
+Migrating to CreateMeetings (20190914071107)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "meetings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "start_time" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190914071107_create_meetings.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190914071107"]]
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/database.rake:5
+Migrating to AlterMeetings (20190919065930)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "meetings" ADD "end_time" datetime[0m
+  ↳ db/migrate/20190919065930_alter_meetings.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190919065930"]]
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/database.rake:5
+Migrating to CreateMembers (20190919083248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "members" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "full_name" varchar, "email" varchar, "birthday" date, "sex" integer DEFAULT 0 NOT NULL, "administrator" boolean DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190919083248_create_members.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190919083248"]]
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/database.rake:5
+Migrating to AlterMembers1 (20190924094535)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "members" ADD "password_digest" varchar[0m
+  ↳ db/migrate/20190924094535_alter_members1.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190924094535"]]
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/database.rake:5
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/database.rake:5
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-24 09:50:48.661331"], ["updated_at", "2019-09-24 09:50:48.661331"]]
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ lib/tasks/database.rake:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ lib/tasks/database.rake:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "Taro"], ["LIMIT", 1]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.4ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "administrator", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Taro"], ["full_name", "佐藤 太郎"], ["email", "Taro@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["administrator", 1], ["created_at", "2019-09-24 09:50:48.881363"], ["updated_at", "2019-09-24 09:50:48.881363"], ["password_digest", "$2a$12$WpA1YhCzZKeYcZJreSEozeQEfmR4p1AMVyw/V6KKITZ6z4RAHyhS."]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "Jiro"], ["LIMIT", 1]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.2ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jiro"], ["full_name", "鈴木 次郎"], ["email", "Jiro@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["created_at", "2019-09-24 09:50:49.084174"], ["updated_at", "2019-09-24 09:50:49.084174"], ["password_digest", "$2a$12$iyzMDcT9Y4wDJLTcsN5MSeGn5s3u2HOTK4C3rILggdT78Uqz72SGS"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "Hana"], ["LIMIT", 1]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.3ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hana"], ["full_name", "高橋 花子"], ["email", "Hana@example.com"], ["birthday", "1981-12-01"], ["sex", 2], ["created_at", "2019-09-24 09:50:49.287906"], ["updated_at", "2019-09-24 09:50:49.287906"], ["password_digest", "$2a$12$JHyDXAyIhkSWIf4Jc5OsPeGz58XgghOr42Rey1jyloa3gM3HhJkRq"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "John"], ["LIMIT", 1]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.4ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John"], ["full_name", "田中 太郎"], ["email", "John@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["created_at", "2019-09-24 09:50:49.493380"], ["updated_at", "2019-09-24 09:50:49.493380"], ["password_digest", "$2a$12$aA1Ps9GDYmbmX/jCvo/SIOsppKXY2kKltTTRYkqoHsjzrPp49Ca8y"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "Mike"], ["LIMIT", 1]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.3ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mike"], ["full_name", "佐藤 次郎"], ["email", "Mike@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["created_at", "2019-09-24 09:50:49.701764"], ["updated_at", "2019-09-24 09:50:49.701764"], ["password_digest", "$2a$12$ZNVb4Twd1yCEnmm6J2SAnuvZLSGBZ8wmJQkMOXQeU1Alyj6EaKUS6"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "Sophy"], ["LIMIT", 1]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.2ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sophy"], ["full_name", "鈴木 花子"], ["email", "Sophy@example.com"], ["birthday", "1981-12-01"], ["sex", 2], ["created_at", "2019-09-24 09:50:49.907287"], ["updated_at", "2019-09-24 09:50:49.907287"], ["password_digest", "$2a$12$5NaVex.Pr81P.G66pOPqkuFVL4/UiviUxQrHmqfFmNA29fo9WPU9y"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "Bill"], ["LIMIT", 1]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.2ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bill"], ["full_name", "高橋 太郎"], ["email", "Bill@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["created_at", "2019-09-24 09:50:50.114651"], ["updated_at", "2019-09-24 09:50:50.114651"], ["password_digest", "$2a$12$eBFgY76D5siSofti/qHG4u/lrAI4AbA2767OVxooB4RoHKEEAQ1H6"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "Alex"], ["LIMIT", 1]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.2ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alex"], ["full_name", "田中 次郎"], ["email", "Alex@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["created_at", "2019-09-24 09:50:50.317065"], ["updated_at", "2019-09-24 09:50:50.317065"], ["password_digest", "$2a$12$S.QuLUgO84kPXu6v6b/ki.QbWqyGu9Pr29tggyffSOS3m0SCgm2u2"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "Mary"], ["LIMIT", 1]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.2ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mary"], ["full_name", "佐藤 花子"], ["email", "Mary@example.com"], ["birthday", "1981-12-01"], ["sex", 2], ["created_at", "2019-09-24 09:50:50.522689"], ["updated_at", "2019-09-24 09:50:50.522689"], ["password_digest", "$2a$12$R751OurbW1thTAziuZWBTu4c0Nay5hISXTF/rzrXG4bH/OQ6kypjW"]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) LIMIT ?[0m  [["name", "Tom"], ["LIMIT", 1]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[36mMember Create (0.3ms)[0m  [1m[32mINSERT INTO "members" ("name", "full_name", "email", "birthday", "sex", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["full_name", "鈴木 太郎"], ["email", "Tom@example.com"], ["birthday", "1981-12-01"], ["sex", 1], ["created_at", "2019-09-24 09:50:50.737408"], ["updated_at", "2019-09-24 09:50:50.737408"], ["password_digest", "$2a$12$YzKHZe0.7cSXXzDlT.9fa.RkdN6elw3H7c/bjfrx2EjOFpTD62n/."]]
+  ↳ db/seeds/development/members.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds/development/members.rb:5
+Started GET "/members" for ::1 at 2019-09-24 18:51:05 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 312ms (Views: 301.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/members/new" for ::1 at 2019-09-24 18:51:09 +0900
+Processing by MembersController#new as HTML
+  Rendering members/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered members/_form.html.erb (250.5ms)
+  Rendered members/new.html.erb within layouts/application (252.6ms)
+Completed 200 OK in 268ms (Views: 265.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2019-09-26 17:12:54 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.5ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (139.7ms)
+  Rendered meetings/index.html.erb within layouts/application (145.9ms)
+Completed 200 OK in 385ms (Views: 374.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/meetings/new" for ::1 at 2019-09-26 17:19:06 +0900
+Processing by MeetingsController#new as HTML
+  Rendering meetings/new.html.erb within layouts/application
+  Rendered meetings/_form.html.erb (51.4ms)
+  Rendered meetings/new.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 75ms (Views: 67.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/meetings" for ::1 at 2019-09-26 17:19:52 +0900
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mnrPML4/SNQ/PTVU21qr4xVzLYsxTmeLhkSYMN9bTp3CyOChyOru7hyNCOf/mcKV5UiJT64W4BIX1VQoyjx5wg==", "meeting"=>{"name"=>"part time job", "start_time(1i)"=>"2019", "start_time(2i)"=>"9", "start_time(3i)"=>"27", "start_time(4i)"=>"18", "start_time(5i)"=>"00", "end_time(1i)"=>"2019", "end_time(2i)"=>"9", "end_time(3i)"=>"27", "end_time(4i)"=>"22", "end_time(5i)"=>"00"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/meetings_controller.rb:30
+  [1m[36mMeeting Create (0.9ms)[0m  [1m[32mINSERT INTO "meetings" ("name", "start_time", "created_at", "updated_at", "end_time") VALUES (?, ?, ?, ?, ?)[0m  [["name", "part time job"], ["start_time", "2019-09-27 09:00:00"], ["created_at", "2019-09-26 08:19:52.475230"], ["updated_at", "2019-09-26 08:19:52.475230"], ["end_time", "2019-09-27 13:00:00"]]
+  ↳ app/controllers/meetings_controller.rb:30
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/meetings_controller.rb:30
+Redirected to http://localhost:3000/meetings/1
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/meetings/1" for ::1 at 2019-09-26 17:19:52 +0900
+Processing by MeetingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMeeting Load (0.2ms)[0m  [1m[34mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/meetings_controller.rb:67
+  Rendering meetings/show.html.erb within layouts/application
+  Rendered meetings/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/meetings" for ::1 at 2019-09-26 17:20:05 +0900
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.8ms)
+  Rendered meetings/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/meetings" for ::1 at 2019-09-26 19:16:31 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.7ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (138.8ms)
+  Rendered meetings/index.html.erb within layouts/application (152.3ms)
+Completed 200 OK in 433ms (Views: 420.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/members" for ::1 at 2019-09-26 19:16:39 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members" ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 64ms (Views: 57.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/members" for ::1 at 2019-09-26 19:21:50 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (11.8ms)
+  Rendered shared/_header.html.erb (2.1ms)
+Completed 200 OK in 201ms (Views: 191.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/members" for ::1 at 2019-09-26 19:22:02 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" ORDER BY id[0m
+  ↳ app/views/members/index.html.erb:11
+  Rendered members/index.html.erb within layouts/application (5.5ms)
+  Rendered shared/_header.html.erb (1.2ms)
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/members/new" for ::1 at 2019-09-26 19:22:07 +0900
+Processing by MembersController#new as HTML
+  Rendering members/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered members/_form.html.erb (161.0ms)
+  Rendered members/new.html.erb within layouts/application (163.0ms)
+  Rendered shared/_header.html.erb (1.0ms)
+Completed 200 OK in 181ms (Views: 179.5ms | ActiveRecord: 0.0ms)
+
+

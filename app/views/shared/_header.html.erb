@@ -1,0 +1,8 @@
+<%= image_tag "logo.png", size: "272x48" %>
+
+<% if current_member %>
+    <ul class="account-menu">
+        <%= current_member.name + "さん" %>
+        <%= menu_link_to "ログアウト", :session, method: :delete, data: { confirm: "ログアウトしますか？"} %>
+    </ul>
+<% end %>
