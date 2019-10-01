@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  get 'accounts/show'
+  get 'accounts/edit'
   resources :meetings
-  root 'meetings#index'
   resources :members do
     get "search", on: :collection
   end
+  resource :session
+  resource :account, only: [:show, :edit, :update]
+  root "sessions#create"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resource :session, only: [:create, :destroy]
 end

@@ -3,10 +3,10 @@ class SessionsController < ApplicationController
         member = Member.find_by(name: params[:name])
         if member&.authenticate(params[:password])
             session[:member_id] = member.id
+            redirect_to controller: :accounts, action: :show
         else
             flash.alert = "名前とパスワードが一致しません。"
         end
-        redirect_to :root
     end
 
     def destroy
