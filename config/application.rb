@@ -34,6 +34,6 @@ module ScheduleCalendar
     config.beginning_of_week = :sunday
     config.i18n.default_locale = :ja
 
-    config.action_controller.permit_all_parameters = true
+    config.action_controller.permit_all_parameters = false
   end
 end

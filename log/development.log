@@ -2938,3 +2938,476 @@ Processing by MeetingsController#index as HTML
 Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2019-10-01 18:27:16 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+  Rendering sessions/create.html.erb within layouts/application
+  Rendered shared/_login_form.html.erb (1.3ms)
+  Rendered sessions/create.html.erb within layouts/application (3.3ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered shared/_header.html.erb (13.3ms)
+Completed 200 OK in 236ms (Views: 223.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/session" for ::1 at 2019-10-01 18:27:19 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KtrgWmn4OKf0gE3tG45Na6dAI7ye5By132W3CGigHHzi9bWPwuMzOh4K9tMlNM13f0Tl8oAI8N6lE+lEgAM+lQ==", "name"=>"Taro", "password"=>"[FILTERED]"}
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" = ? LIMIT ?[0m  [["name", "Taro"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+Redirected to http://localhost:3000/accounts/show
+Completed 302 Found in 216ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/accounts/show" for ::1 at 2019-10-01 18:27:19 +0900
+Processing by AccountsController#show as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered members/_body.html.erb (2.4ms)
+  Rendered accounts/show.html.erb within layouts/application (4.2ms)
+  Rendered shared/_header.html.erb (1.1ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/session" for ::1 at 2019-10-01 18:45:21 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for SessionsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/session" for ::1 at 2019-10-01 18:45:31 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KtrgWmn4OKf0gE3tG45Na6dAI7ye5By132W3CGigHHzi9bWPwuMzOh4K9tMlNM13f0Tl8oAI8N6lE+lEgAM+lQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-01 18:45:31 +0900
+Processing by SessionsController#create as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+  Rendering sessions/create.html.erb within layouts/application
+  Rendered shared/_login_form.html.erb (0.8ms)
+  Rendered sessions/create.html.erb within layouts/application (1.5ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 157ms (Views: 151.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/session" for ::1 at 2019-10-01 18:47:01 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0y7VjrLevuLGBpHLIUyK23t5GUzWWl+MGW2azygymRgbAYBbGcW1fyyMKvUf9grHo33fAsi2s+djG8SDwJG78Q==", "name"=>"Taro", "password"=>"[FILTERED]"}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" = ? LIMIT ?[0m  [["name", "Taro"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+Redirected to http://localhost:3000/accounts/show
+Completed 302 Found in 224ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts/show" for ::1 at 2019-10-01 18:47:02 +0900
+Processing by AccountsController#show as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered members/_body.html.erb (0.5ms)
+  Rendered accounts/show.html.erb within layouts/application (1.6ms)
+  Rendered shared/_header.html.erb (1.3ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-10-01 19:06:38 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+  Rendering sessions/create.html.erb within layouts/application
+  Rendered shared/_login_form.html.erb (1.4ms)
+  Rendered sessions/create.html.erb within layouts/application (3.2ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered shared/_header.html.erb (16.7ms)
+Completed 200 OK in 209ms (Views: 192.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/session" for ::1 at 2019-10-01 19:06:42 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qVoaoVX1HtZQn0r7ugIUmTngsFSAaop7Ps67gP023xZhdU90/u4VS7oV8cWEuJSF4eR2Gp6GZhBEuOXMFZX9/w==", "name"=>"Taro", "password"=>"[FILTERED]"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" = ? LIMIT ?[0m  [["name", "Taro"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+Redirected to http://localhost:3000/accounts/show
+Completed 302 Found in 212ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/show" for ::1 at 2019-10-01 19:06:42 +0900
+Processing by AccountsController#show as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered members/_body.html.erb (1.7ms)
+  Rendered accounts/show.html.erb within layouts/application (3.1ms)
+  Rendered shared/_header.html.erb (1.0ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/meetings" for ::1 at 2019-10-01 19:06:54 +0900
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.5ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (123.1ms)
+  Rendered meetings/index.html.erb within layouts/application (131.7ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered shared/_header.html.erb (1.7ms)
+Completed 200 OK in 150ms (Views: 146.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/meetings/new" for ::1 at 2019-10-01 19:07:13 +0900
+Processing by MeetingsController#new as HTML
+  Rendering meetings/new.html.erb within layouts/application
+  Rendered meetings/_form.html.erb (18.0ms)
+  Rendered meetings/new.html.erb within layouts/application (19.2ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/meetings" for ::1 at 2019-10-01 19:07:19 +0900
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YUY+Ar8ICzYkiJ2iZddLDPXWi45YokK/7GAWCeYDiL859BGTyd2tDAc4oBFBFCJ6Be0vSsf6xSZ98doR82S/4A==", "meeting"=>{"name"=>"part time job", "start_time(1i)"=>"2019", "start_time(2i)"=>"10", "start_time(3i)"=>"1", "start_time(4i)"=>"19", "start_time(5i)"=>"07", "end_time(1i)"=>"2019", "end_time(2i)"=>"10", "end_time(3i)"=>"1", "end_time(4i)"=>"19", "end_time(5i)"=>"07"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/meetings_controller.rb:30
+  [1m[36mMeeting Create (0.8ms)[0m  [1m[32mINSERT INTO "meetings" ("name", "start_time", "created_at", "updated_at", "end_time") VALUES (?, ?, ?, ?, ?)[0m  [["name", "part time job"], ["start_time", "2019-10-01 10:07:00"], ["created_at", "2019-10-01 10:07:19.159485"], ["updated_at", "2019-10-01 10:07:19.159485"], ["end_time", "2019-10-01 10:07:00"]]
+  ↳ app/controllers/meetings_controller.rb:30
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/meetings_controller.rb:30
+Redirected to http://localhost:3000/meetings/3
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/meetings/3" for ::1 at 2019-10-01 19:07:19 +0900
+Processing by MeetingsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMeeting Load (0.2ms)[0m  [1m[34mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/meetings_controller.rb:67
+  Rendering meetings/show.html.erb within layouts/application
+  Rendered meetings/show.html.erb within layouts/application (0.7ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered shared/_header.html.erb (1.7ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/meetings" for ::1 at 2019-10-01 19:07:20 +0900
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (5.9ms)
+  Rendered meetings/index.html.erb within layouts/application (10.3ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered shared/_header.html.erb (1.6ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-10-01 19:09:55 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+  Rendering sessions/create.html.erb within layouts/application
+  Rendered shared/_login_form.html.erb (0.7ms)
+  Rendered sessions/create.html.erb within layouts/application (1.6ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered shared/_header.html.erb (13.2ms)
+Completed 200 OK in 186ms (Views: 175.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/session" for ::1 at 2019-10-01 19:10:10 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wBCjKz0+PfWWs/lc4iaa1jp7OOvTNmR0GBo8N6r5DDIIP/b+liU2aHw5QmLcnBrK4n/+pc3aiB9ibGJ7Qlou2w==", "name"=>"Jiro", "password"=>"[FILTERED]"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" = ? LIMIT ?[0m  [["name", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+Redirected to http://localhost:3000/accounts/show
+Completed 302 Found in 217ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/show" for ::1 at 2019-10-01 19:10:11 +0900
+Processing by AccountsController#show as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered members/_body.html.erb (0.5ms)
+  Rendered accounts/show.html.erb within layouts/application (1.4ms)
+  Rendered shared/_header.html.erb (0.9ms)
+Completed 200 OK in 43ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/session" for ::1 at 2019-10-01 20:21:41 +0900
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JCAa+gbH4tmkunrkNOhFZnuhzlUSUdGuLWwG2TH2fVPsD08vrdzpRE4wwdoKUsV6o6UIGwy9PcVXGliV2VVfug=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-01 20:21:41 +0900
+Processing by SessionsController#create as HTML
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+  Rendering sessions/create.html.erb within layouts/application
+  Rendered shared/_login_form.html.erb (1.2ms)
+  Rendered sessions/create.html.erb within layouts/application (2.9ms)
+  Rendered shared/_header.html.erb (2.6ms)
+Completed 200 OK in 240ms (Views: 230.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/meetings" for ::1 at 2019-10-01 20:21:53 +0900
+Processing by MeetingsController#index as HTML
+  Rendering meetings/index.html.erb within layouts/application
+  [1m[36mMeeting Load (0.5ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings"[0m
+  ↳ app/views/meetings/index.html.erb:16
+  Rendered /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (178.6ms)
+  Rendered meetings/index.html.erb within layouts/application (217.7ms)
+  Rendered shared/_header.html.erb (1.0ms)
+Completed 200 OK in 236ms (Views: 233.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-10-03 19:03:26 +0900
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+  Rendering sessions/create.html.erb within layouts/application
+  Rendered shared/_login_form.html.erb (2.0ms)
+  Rendered sessions/create.html.erb within layouts/application (4.0ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 390ms (Views: 370.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/session" for ::1 at 2019-10-03 19:03:30 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+FPbxGEw4jLMyNM4aU2zvE+HCF+V4D5eqtiWVhOQSHkwfI4RyivpryZCaAZX9zOgl4POEYsM0jXQrsga+zNqkA==", "name"=>"Taro", "password"=>"[FILTERED]"}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" = ? LIMIT ?[0m  [["name", "Taro"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+Redirected to http://localhost:3000/accounts/show
+Completed 302 Found in 219ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts/show" for ::1 at 2019-10-03 19:03:30 +0900
+Processing by AccountsController#show as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered members/_body.html.erb (3.3ms)
+  Rendered accounts/show.html.erb within layouts/application (5.1ms)
+  Rendered shared/_header.html.erb (1.2ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/password/edit" for ::1 at 2019-10-03 19:03:33 +0900
+Processing by PasswordsController#edit as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendering passwords/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered passwords/edit.html.erb within layouts/application (142.0ms)
+  Rendered shared/_header.html.erb (1.0ms)
+Completed 200 OK in 163ms (Views: 160.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/password" for ::1 at 2019-10-03 19:03:55 +0900
+Processing by PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/MLUnbJQVTfyz+OJ67dcN28bZ8KLTYYBhlZ+s4mHSlg3rN1WpF8Y/Ujy0LryUrjx5b7UanXLJJXNeNNX7kdhZA==", "account"=>{"current_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"変更"}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/passwords_controller.rb:18:in `update'
+Started PATCH "/password" for ::1 at 2019-10-03 19:05:07 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/katasetakumi/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/MLUnbJQVTfyz+OJ67dcN28bZ8KLTYYBhlZ+s4mHSlg3rN1WpF8Y/Ujy0LryUrjx5b7UanXLJJXNeNNX7kdhZA==", "account"=>{"current_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"変更"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/passwords_controller.rb:19
+  [1m[36mMember Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) AND "members"."id" != ? LIMIT ?[0m  [["name", "Taro"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/passwords_controller.rb:19
+  [1m[36mMember Update (0.3ms)[0m  [1m[33mUPDATE "members" SET "password_digest" = ?, "updated_at" = ? WHERE "members"."id" = ?[0m  [["password_digest", "$2a$12$aie2VFhr/rgLkrpdUpwDBu7AnVMNNsViLe0sebMG3rlUfNtpxdyvy"], ["updated_at", "2019-10-03 10:05:07.559396"], ["id", 1]]
+  ↳ app/controllers/passwords_controller.rb:19
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/passwords_controller.rb:19
+Redirected to http://localhost:3000/account
+Completed 302 Found in 439ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/account" for ::1 at 2019-10-03 19:05:07 +0900
+Processing by AccountsController#show as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered members/_body.html.erb (0.4ms)
+  Rendered accounts/show.html.erb within layouts/application (1.7ms)
+  Rendered shared/_header.html.erb (2.1ms)
+Completed 200 OK in 205ms (Views: 203.6ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/session" for ::1 at 2019-10-03 19:05:19 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7gQZfdDT0GmePFXR3l7Bokuc7t8vmAm89t/e7Cx2hs4mK0yoe8jb9HS27u/g5EG+k5gokTF05deMqYCgxNWkJw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-03 19:05:19 +0900
+Processing by SessionsController#create as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+  Rendering sessions/create.html.erb within layouts/application
+  Rendered shared/_login_form.html.erb (0.9ms)
+  Rendered sessions/create.html.erb within layouts/application (1.9ms)
+  Rendered shared/_header.html.erb (1.3ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/session" for ::1 at 2019-10-03 19:05:43 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6yOAQVhv94e8963mdG+3Plx6HROvIf/MJsaaIUB25UcjDNWU83T8GlZ9FthK1TcihH7bXbHNE6dcsMRtqNXHrg==", "name"=>"Taro", "password"=>"[FILTERED]"}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" = ? LIMIT ?[0m  [["name", "Taro"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+Redirected to http://localhost:3000/accounts/show
+Completed 302 Found in 218ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts/show" for ::1 at 2019-10-03 19:05:43 +0900
+Processing by AccountsController#show as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered members/_body.html.erb (0.3ms)
+  Rendered accounts/show.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (1.0ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/session" for ::1 at 2019-10-03 19:05:46 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vJKF3t5UkemUz5lGQJj/iEWwEvapUh/1WTYPbIsW8Vd0vdALdU+adH5FInh+In+UnbTUuLe+854jQFEgY7XTvg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-03 19:05:46 +0900
+Processing by SessionsController#create as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+  Rendering sessions/create.html.erb within layouts/application
+  Rendered shared/_login_form.html.erb (0.6ms)
+  Rendered sessions/create.html.erb within layouts/application (1.4ms)
+  Rendered shared/_header.html.erb (1.3ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/session" for ::1 at 2019-10-03 19:06:07 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IIu6j3jBbtPxa+y7cT/9IWwCqO23Xsd0dEHGjCX4CDbopO9a09plThvhV4VPhX09tAZuo6myKx8ON5jAzVsq3w==", "name"=>"Taro", "password"=>"[FILTERED]"}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" = ? LIMIT ?[0m  [["name", "Taro"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+Redirected to http://localhost:3000/accounts/show
+Completed 302 Found in 217ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts/show" for ::1 at 2019-10-03 19:06:08 +0900
+Processing by AccountsController#show as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered members/_body.html.erb (0.7ms)
+  Rendered accounts/show.html.erb within layouts/application (1.7ms)
+  Rendered shared/_header.html.erb (1.1ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/session" for ::1 at 2019-10-03 19:06:12 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"b6ARsMiBxJVTRUpRcgdBfZ7EPVYH9DbEXrCUWOWMSpynj0RlY5rPCLnP8W9MvcFhRsD7GBkY2q8kxsoUDS9odQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-03 19:06:12 +0900
+Processing by SessionsController#create as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+  Rendering sessions/create.html.erb within layouts/application
+  Rendered shared/_login_form.html.erb (0.7ms)
+  Rendered sessions/create.html.erb within layouts/application (1.5ms)
+  Rendered shared/_header.html.erb (0.9ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.1ms)
+
+
